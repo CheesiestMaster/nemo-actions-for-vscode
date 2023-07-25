@@ -1,0 +1,31 @@
+name: Build Debian Package
+on:
+  push:
+    branches:
+      - master  # Adjust this branch name as needed
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Debian package
+      run: |
+        # Navigate to the parent directory
+        cd ..
+        
+        # Build the Debian package
+        fakeroot dpkg-deb --build vscode-nemo-package
+
+    - name: Copy .deb file to repository root
+      run: |
+        # Move the .deb file to the repository root
+        cp ../vscode-nemo-package.deb vscode_nemo_package.deb
+        rm ../vscode-nemo-package.deb
+
+    - name: Upload .deb file
+      uses: actions/upload-artifact@v2
+      with:
+        name: vscode-nemo-package
+        path: vscode_nemo_package.deb

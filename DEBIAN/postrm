@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Remove the Nemo actions
+rm -f ~/.local/share/nemo/actions/vscode_dir.nemo_action
+rm -f ~/.local/share/nemo/actions/vscode_empty.nemo_action
+
+# Reload Nemo
+nemo -q

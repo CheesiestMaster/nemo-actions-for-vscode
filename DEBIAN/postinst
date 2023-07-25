@@ -1,0 +1,3 @@
+#!/bin/bash
+cp *.nemo_action ~/.local/share/nemo/actions/
+nemo -q

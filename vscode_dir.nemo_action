@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=Open with Code
+Comment=Open the selected folder with Visual Studio Code
+Exec=code %F
+Icon-Name=visual-studio-code
+Selection=Dir
+Extensions=dir;
+Quote=double

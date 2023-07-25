@@ -1,0 +1,8 @@
+Package: vscode-nemo
+Version: 1.0
+Section: misc
+Priority: optional
+Architecture: all
+Depends: code, nemo
+Maintainer: Jason Simpson <jason@jdsnetwork.com>
+Description: Adds nemo actions to open directories in vscode
