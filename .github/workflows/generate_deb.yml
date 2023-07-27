@@ -19,8 +19,8 @@ jobs:
     - name: Copy .deb file to repository root
       run: |
         # Move the .deb file to the repository root
-        cp ../vscode-nemo-package.deb vscode_nemo_package.deb
-        rm ../vscode-nemo-package.deb
+        cp ../../vscode-nemo-package.deb vscode_nemo_package.deb
+        rm ../../vscode-nemo-package.deb
 
     - name: Upload .deb file
       uses: actions/upload-artifact@v2
