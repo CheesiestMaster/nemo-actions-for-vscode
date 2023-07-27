@@ -11,18 +11,18 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Debian package
-      working-directory: ../
+      working-directory: ../..
       run: |
         # Build the Debian package
         pwd
-        fakeroot dpkg-deb --build vscode-nemo-package
+        fakeroot dpkg-deb --build nemo-actions-for-vscode
         
 
     - name: Copy .deb file to repository root
       run: |
         # Move the .deb file to the repository root
-        cp ../../vscode-nemo-package.deb vscode_nemo_package.deb
-        rm ../../vscode-nemo-package.deb
+        cp ../../nemo-actions-for-vscode.deb vscode_nemo_package.deb
+        rm ../../nemo-actions-for-vscode.deb
 
     - name: Upload .deb file
       uses: actions/upload-artifact@v2
