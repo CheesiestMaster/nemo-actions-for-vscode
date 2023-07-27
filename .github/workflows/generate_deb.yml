@@ -14,7 +14,9 @@ jobs:
       working-directory: ../
       run: |
         # Build the Debian package
+        pwd
         fakeroot dpkg-deb --build vscode-nemo-package
+        
 
     - name: Copy .deb file to repository root
       run: |
