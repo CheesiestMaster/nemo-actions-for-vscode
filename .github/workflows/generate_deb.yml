@@ -14,7 +14,7 @@ jobs:
       working-directory: ../..
       run: |
         # Build the Debian package
-        ls ./nemo-actions-for-vscode
+        ls ./nemo-actions-for-vscode/nemo-actions-for-vscode
         fakeroot dpkg-deb --build nemo-actions-for-vscode
         
 
