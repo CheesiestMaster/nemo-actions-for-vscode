@@ -11,10 +11,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Debian package
-      working-directory: ../..
+      working-directory: ../
       run: |
         # Build the Debian package
-        ls ./nemo-actions-for-vscode/nemo-actions-for-vscode
+        ls ./nemo-actions-for-vscode/DEBIAN
         fakeroot dpkg-deb --build nemo-actions-for-vscode
         
 
